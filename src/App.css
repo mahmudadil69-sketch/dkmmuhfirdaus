@@ -1,0 +1,15 @@
+.App {
+  min-height: 100vh;
+}
+
+.App-logo {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: none;
+  }
+}
+
+

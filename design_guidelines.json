@@ -1,0 +1,165 @@
+{
+  "project_info": {
+    "name": "KeuanganMasjid - System Management Keuangan Masjid Modern",
+    "theme": "Elegan Islamic Modern (Emerald Green & Gold Accents)",
+    "language": "Indonesian (id-ID)",
+    "currency_format": "Rupiah (IDR) e.g., Rp 1.500.000",
+    "archetype": "ORGANIC & EARTHY / LUXURY ISLAMIC PRECISION",
+    "app_type": "dashboard / saas_app"
+  },
+  "colors": {
+    "primary": {
+      "deep": "#043927",
+      "main": "#065F46",
+      "light": "#059669",
+      "subtle": "#ECFDF5",
+      "tailwind": "emerald-800"
+    },
+    "accent_gold": {
+      "main": "#D4AF37",
+      "hover": "#C5A059",
+      "light": "#FEF3C7",
+      "border": "#F59E0B",
+      "tailwind": "amber-500"
+    },
+    "income": {
+      "main": "#10B981",
+      "bg": "#D1FAE5",
+      "text": "#065F46"
+    },
+    "expense": {
+      "main": "#EF4444",
+      "bg": "#FEE2E2",
+      "text": "#991B1B"
+    },
+    "neutrals": {
+      "bg_light": "#F8FAF8",
+      "surface": "#FFFFFF",
+      "card_border": "#E2E8F0",
+      "text_dark": "#0F172A",
+      "text_muted": "#475569"
+    }
+  },
+  "typography": {
+    "heading_font": "'Plus Jakarta Sans', 'Amiri', sans-serif",
+    "body_font": "'Plus Jakarta Sans', system-ui, sans-serif",
+    "mono_font": "'JetBrains Mono', monospace",
+    "hierarchy": {
+      "h1": "text-3xl sm:text-4xl font-bold tracking-tight text-emerald-950 dark:text-emerald-50",
+      "h2": "text-xl sm:text-2xl font-semibold text-emerald-900 dark:text-emerald-100",
+      "h3": "text-lg sm:text-xl font-medium text-emerald-800 dark:text-emerald-200",
+      "body": "text-sm sm:text-base text-slate-700 leading-relaxed",
+      "caption": "text-xs font-medium text-slate-500 uppercase tracking-wider"
+    }
+  },
+  "layout_and_navigation": {
+    "sidebar": "Fixed left sidebar with Emerald Deep background (#043927), Islamic star pattern overlay, Gold active indicators, collapsing state on mobile",
+    "header": "Top bar with Mosque selector, Date in Gregorian & Hijri (e.g., 14 Muharram 1448 H), Quick Infaq button (Gold CTA), Profile & Role Switcher",
+    "grid": "Bento Grid Mode B for financial cards with 4 key metrics, tight 16px gaps, consistent border-radius (rounded-xl)",
+    "friday_special_theme": "Laporan Mingguan Jumat page has a special golden header badge, Islamic geometric border accent, and print-ready layout"
+  },
+  "components_and_features": [
+    {
+      "name": "Dashboard Utama",
+      "route": "/",
+      "test_id": "dashboard-overview",
+      "elements": [
+        "Card Saldo Kas Utama, Pemasukan Bulan Ini, Pengeluaran Bulan Ini, Saldo Infaq Jumat",
+        "Pie Chart (Breakdown Kategori Pemasukan/Pengeluaran)",
+        "Bar Chart (Perbandingan Pemasukan vs Pengeluaran per Bulan)",
+        "Line Chart (Tren Saldo Kas 12 Bulan)",
+        "Tabel 5 Transaksi Terakhir with Quick Action Modals"
+      ]
+    },
+    {
+      "name": "Laporan Mingguan (Khusus Hari Jumat)",
+      "route": "/laporan-jumat",
+      "test_id": "friday-weekly-report-page",
+      "elements": [
+        "Friday Date Picker (Pilih Tanggal Jumat)",
+        "Header Bulletin Board style: Nama Masjid, Tanggal Hijriah & Masehi",
+        "Ringkasan Kas Kotak Infaq Jumat & Transfer",
+        "Daftar Penceramah/Khatib & Imam Jumat Minggu Ini",
+        "Grafik Komparasi Kotak Infaq 4 Jumat Terakhir",
+        "Tombol Cetak PDF Laporan Jumat DKM"
+      ]
+    },
+    {
+      "name": "Manajemen Transaksi",
+      "route": "/transaksi",
+      "test_id": "transactions-management-page",
+      "elements": [
+        "Filter Tipe (Semua, Pemasukan, Pengeluaran)",
+        "Filter Kategori (Zakat, Infaq, Operasional, Renovasi, dll)",
+        "Pencarian & Selector Rentang Tanggal",
+        "Modal Tambah Transaksi (Form IDR auto-format, Kategori, Donatur, Catatan, Bukti Transfer)",
+        "Tabel Transaksi dengan badge pemasukan/pengeluaran & pagination"
+      ]
+    },
+    {
+      "name": "Manajemen Kategori",
+      "route": "/kategori",
+      "test_id": "categories-management-page",
+      "elements": [
+        "Kartu Kategori Pemasukan & Pengeluaran",
+        "Warna Badge Kategori & Alokasi Anggaran",
+        "Modal Tambah/Edit Kategori"
+      ]
+    },
+    {
+      "name": "Donatur & Jamaah",
+      "route": "/donatur",
+      "test_id": "donors-management-page",
+      "elements": [
+        "Daftar Donatur Tetap & Hamba Allah",
+        "Riwayat Kontribusi per Donatur",
+        "Badges Donatur Loyal / Donatur Qurban / Donatur Yatim"
+      ]
+    },
+    {
+      "name": "Program & Kegiatan Masjid",
+      "route": "/program",
+      "test_id": "programs-management-page",
+      "elements": [
+        "Kartu Program (misal: Renovasi Kubah, Santunan Yatim, Buka Puasa Sunnah)",
+        "Target Dana vs Dana Terkumpul Progress Bar (% Gold indicator)",
+        "Daftar Donatur Terikat Program"
+      ]
+    },
+    {
+      "name": "Laporan Bulanan & Tahunan",
+      "route": "/laporan-periode",
+      "test_id": "period-reports-page",
+      "elements": [
+        "Export Excel & PDF feature",
+        "Format tanda tangan Ketua DKM & Bendahara Masjid",
+        "Breakdown Laporan per Akun Kas"
+      ]
+    },
+    {
+      "name": "Autentikasi & Peran User",
+      "route": "/login",
+      "test_id": "auth-login-page",
+      "elements": [
+        "Switch Role: Admin DKM vs Bendahara Masjid",
+        "Form Login dengan visual Islamic geometric pattern"
+      ]
+    }
+  ],
+  "image_urls": {
+    "mosque_interior_hero": "https://images.unsplash.com/photo-1584027123930-c1f17b17ee1a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHw0fHxtb3NxdWUlMjBpbnRlcmlvciUyMGFyY2hpdGVjdHVyZSUyMGRvbWV8ZW58MHx8fHwxNzg4Mzk3OTAxfDA&ixlib=rb-4.1.0&q=85",
+    "mosque_hall_grand": "https://images.unsplash.com/photo-1698967406711-ede239b6c07e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHxtb3NxdWUlMjBpbnRlcmlvciUyMGFyY2hpdGVjdHVyZSUyMGRvbWV8ZW58MHx8fHwxNzg4Mzk3OTAxfDA&ixlib=rb-4.1.0&q=85",
+    "mosque_wood_arch": "https://images.unsplash.com/photo-1577561425536-51f550bf91d3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwzfHxtb3NxdWUlMjBpbnRlcmlvciUyMGFyY2hpdGVjdHVyZSUyMGRvbWV8ZW58MHx8fHwxNzg4Mzk3OTAxfDA&ixlib=rb-4.1.0&q=85",
+    "donor_avatar_male": "https://images.unsplash.com/photo-1516011362164-3095a82b0af9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwyfHxpbmRvbmVzaWFuJTIwbXVzbGltJTIwcG9ydHJhaXQlMjBzbWlsZXxlbnwwfHx8fDE3ODgzOTc5MDV8MA&ixlib=rb-4.1.0&q=85",
+    "donor_avatar_female": "https://images.unsplash.com/photo-1613447895590-97f008b7fff3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwbXVzbGltJTIwcG9ydHJhaXQlMjBzbWlsZXxlbnwwfHx8fDE3ODgzOTc5MDV8MA&ixlib=rb-4.1.0&q=85"
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": {
+    "test_id_rule": "ALL interactive components, buttons, inputs, links, and cards MUST contain explicit data-testid attributes.",
+    "currency_rule": "Format all monetary numbers using Indonesian Rupiah format: 'Rp ' + amount.toLocaleString('id-ID')",
+    "chart_library": "Use Recharts for PieChart, BarChart, and LineChart with emerald (#065F46), gold (#D4AF37), teal (#0D9488), and amber (#F59E0B) colors.",
+    "toast_notifications": "Use sonner toast for success/error feedback (e.g., 'Transaksi berhasil ditambahkan').",
+    "ui_components": "Use Shadcn components (.jsx files in src/components/ui) customized with Emerald Green & Gold accent borders.",
+    "accessibility": "Ensure high contrast between emerald background and gold/white text."
+  }
+}
+

@@ -1,0 +1,16 @@
+
+Action: lint_javascript({"path_pattern":"/app/frontend/src"})
+Observation: /app/frontend/src/components/ui/calendar.jsx:59:19: Do not define components during render. React will see a new component type on every render and destroy the entire subtree’s DOM nodes and state (https://reactjs.org/docs/reconciliation.html#elements-of-different-types). Instead, move this component definition out of the parent component “Calendar” and pass data as props. If you want to allow component creation in props, set allowAsProps option to true. [Error/react/no-unstable-nested-components]
+/app/frontend/src/components/ui/calendar.jsx:62:20: Do not define components during render. React will see a new component type on every render and destroy the entire subtree’s DOM nodes and state (https://reactjs.org/docs/reconciliation.html#elements-of-different-types). Instead, move this component definition out of the parent component “Calendar” and pass data as props. If you want to allow component creation in props, set allowAsProps option to true. [Error/react/no-unstable-nested-components]
+/app/frontend/src/components/ui/command.jsx:36:52: Unknown property 'cmdk-input-wrapper' found [Error/react/no-unknown-property]
+/app/frontend/src/context/AuthContext.jsx:36:55: Empty block statement. [Error/no-empty]
+/app/frontend/src/pages/Dashboard.jsx:49:96: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`. [Error/react/no-unescaped-entities]
+/app/frontend/src/pages/Transaksi.jsx:33:29: Unused eslint-disable directive (no problems were reported). [Warning]
+
+6 problems
+
+
+Action: execute_bash({"command":"sleep 2 && curl -s -X POST http://localhost:8001/api/auth/login -H \"Content-Type: application/json\" -d '{\"email\":\"mahmudadil69@gmail.com\",\"password\":\"Admin@123\"}' -c /tmp/c.txt && echo && curl -s -b /tmp/c.txt http://localhost:8001/api/dashboard/summary | head -c 300"})
+Observation: {"user":{"id":"6a98ca0390cf1c453cfb86c9","email":"mahmudadil69@gmail.com","name":"Admin DKM","role":"admin"},"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YTk4Y2EwMzkwY2YxYzQ1M2NmYjg2YzkiLCJlbWFpbCI6Im1haG11ZGFkaWw2OUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ0eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg4NDQxNTg3fQ.MQSsWNMh-a6iFl1X3rfYvKaQiUqeZZLpPAjCl-p5OLA"}
+{"saldo":0,"total_pemasukan":0,"total_pengeluaran":0,"bulan_ini_pemasukan":0,"bulan_ini_pengeluaran":0,"infaq_jumat_bulan_ini":0,"pie_pemasukan":[],"pie_pengeluaran":[],"bar_monthly":[{"label":"Apr 2026","pemasukan":0,"pengeluaran":0},{"label":"May 2026","pemasukan":0,"pengeluaran":0},{"label":"Jun
+Exit code: 0

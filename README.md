@@ -50,6 +50,20 @@ npm run build
 
 Folder `build/` dapat di-deploy ke layanan static hosting. Backend membutuhkan layanan Python/FastAPI dan MongoDB yang dapat diakses oleh server.
 
+## Deploy ke Vercel
+
+Import repository ini sebagai project baru di Vercel. Konfigurasi [vercel.json](vercel.json) akan memakai `npm run build`, folder output `build`, dan mendukung React Router.
+
+Tambahkan Environment Variable berikut di Vercel sebelum deploy:
+
+```env
+REACT_APP_BACKEND_URL=https://alamat-backend-anda.example.com
+```
+
+Jangan isi dengan `http://localhost:8000` pada deployment online. Backend FastAPI harus dideploy sebagai layanan terpisah dan harus mengizinkan domain Vercel pada `CORS_ORIGINS`.
+
+Error `DEPLOYMENT_NOT_FOUND` berarti URL deployment yang dibuka sudah dihapus, salah, atau berasal dari project Vercel lain. Buka project dari dashboard Vercel lalu gunakan URL deployment terbaru.
+
 ## GitHub
 
 ```bash
